@@ -1,0 +1,93 @@
+body {
+  background: #293445;
+  margin: 0;
+  padding: 0;
+}
+.mainContainer {
+  display: inline-block;
+  border: 2px;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 15%;
+  left: -200px;
+  transform: translate(-50%, 0%);
+  animation: slideIn 1s ease forwards;
+  padding: 10px;
+  margin: 5px;
+  background: #393e46;
+  /* font-weight: 600; */
+  font-size: larger;
+}
+
+@keyframes slideIn {
+  from {
+    left: -200px; /* Start off-screen to the left */
+  }
+  to {
+    left: 50%; /* Slide in to the left edge of the screen */
+  }
+}
+
+.numberContainer {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* margin: 10px; */
+  margin-bottom: 3px;
+}
+
+.numberContainer > button {
+  /* padding: 10px; */
+  background: #f78536;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  font-size: larger;
+}
+
+.symbolContainer {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  /* margin: 10px; */
+}
+
+.symbolContainer > button {
+  /* padding: 10px; */
+  background: #f78536;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  font-size: larger;
+}
+
+/* Define a CSS class for the output box */
+.output-box {
+  width: 99%;
+  height: 3em;
+  background: #f78536;
+  /* border: 2px solid #ff6000; Set the border style */
+  border-radius: 7px;
+  text-align: center;
+  /* margin: 10px; */
+  font-size: larger;
+  transition: border 0.3s ease;
+  margin-bottom: 3px;
+  font-size: larger;
+  overflow: auto;
+}
+
+button:focus,
+button.highlight {
+  background: #ff9966;
+  transition: background 0.3s ease;
+}
+
+/* Add focus styles to buttons */
+button:focus,
+button.highlight {
+  outline: 2px solid #ff6000;
+  box-shadow: 0 0 4px rgba(255, 96, 0, 0.7);
+}
